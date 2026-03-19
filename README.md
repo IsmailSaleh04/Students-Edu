@@ -234,9 +234,9 @@ Given all available features for a student's enrollment, predict their final wei
 
 ### 4.7 Key Observations — Goal 1
 
-> - Gdradient Boosting Achieved the R² score and lowest RMSE and MAE.
-> - Ensambling methods (RF, GBM) slightly outperformed linear baselines, and the simple decision tree.
-> - R² was low overall. Indicating that the data might have been syntheticly generated or not real. Or that the data may have weak feature-target signal by design.
+- Gdradient Boosting Achieved the R² score and lowest RMSE and MAE.
+- Ensambling methods (RF, GBM) slightly outperformed linear baselines, and the simple decision tree.
+- R² was low overall. Indicating that the data might have been syntheticly generated or not real. Or that the data may have weak feature-target signal by design.
 
 > **Fig 4.5 — Predicted vs Actual scatter plot (best model)**
 > ![Predicted vs actual placeholder](figures/Grades_pred_vs_actual.png)
@@ -318,17 +318,17 @@ Given a student's full academic profile and behavior signals from semester T, pr
 
 #### Top Influencing Factors
 
-> - **Feature 1** (`avg_score`) — dominated the models weights and counted for ~78% of explaining the target.
-> - **Feature 2** (`pv_trend`) 
-> - **Feature 3** (`stress_level`)
-> - **Feature 4** (`att_trend`)
-> - **Feature 5** (`inactivity_mean`)
+ - **Feature 1** (`avg_score`) — dominated the models weights and counted for ~78% of explaining the target.
+ - **2** (`pv_trend`) 
+ - **3** (`stress_level`)
+ - **4** (`att_trend`)
+ - **5** (`inactivity_mean`)
 
 ### 5.8 Key Observations — Goal 2
 
-> - Gradient Boosting was the best preforming model by a slight margin. But overall all models preformed well.
-> - `avg_score` feature was by far the most influential feature, as it solely counted for near 70% of feature importances.
-> - behavioral signals show weak predictive power because the dataset it lacked a causal relationship between engagement and GPA.
+ - Gradient Boosting was the best preforming model by a slight margin. But overall all models preformed well.
+ - `avg_score` feature was by far the most influential feature, as it solely counted for near 70% of feature importances.
+ - behavioral signals show weak predictive power because the dataset it lacked a causal relationship between engagement and GPA.
 
 ---
 
