@@ -32,7 +32,7 @@
    - [5.6 Model Diagnostics](#56-model-diagnostics)
    - [5.7 Feature Importance & Explainability](#57-feature-importance)
    - [5.8 Key Observations](#58-key-observations--goal-2)
-6. [Limitations & Future Work](#6-limitations--future-work)
+6. [Limitations](#6-limitations)
 7. [Repository Structure](#7-repository-structure)
 8. [Dependencies](#8-dependencies)
 
@@ -332,23 +332,13 @@ Given a student's full academic profile and behavior signals from semester T, pr
 
 ---
 
-## 6. Limitations & Future Work
-
-### 6.1 Known Limitations
+## 6. Limitations
 
 - **Synthetic data:** behavioral features (attendance, LMS, engagement) were generated independently from GPA. This artificially suppresses the predictive signal that would exist in real-world data.
 - **Small dataset:** 660 student-semester rows for Goal 2 limits model complexity and generalisability.
 - **Class imbalance:** ~68% positive rate in Goal 2 inflates F1 for the majority class — Precision for the minority (No Probation) class is lower.
 - **No temporal validation:** a production model should be validated on a future held-out semester, not a random split.
 - **Goal 1 R² ceiling:** regression performance is bounded by the weak feature-target correlation baked into the synthetic data.
-
-### 6.2 Future Work
-
-- **Temporal cross-validation:** train on semesters 1–3, validate on semester 4.
-- **SMOTE or class weighting** to address imbalance in Goal 2.
-- **SHAP values** for deeper per-student explainability beyond aggregate feature importance.
-- **LSTM / sequence model** for Goal 1 using weekly grade trajectories as a time series.
-- **Hybrid recommendation system** (Goal 5) using `student_skills × course_skills` cosine similarity.
 
 ---
 
